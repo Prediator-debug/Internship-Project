@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam Mail Detector</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="background-glass"></div>
+    <div class="container">
+        <header>
+            <h1>Spam Mail Shield</h1>
+            <p>AI-Powered Message Classification</p>
+        </header>
+
+        <main class="glass-card">
+            <div class="input-section">
+                <textarea id="messageInput" placeholder="Paste your email or SMS message here..." rows="5"></textarea>
+                <div class="controls">
+                    <button id="analyzeBtn" class="btn">
+                        <span class="btn-text">Analyze Message</span>
+                        <div class="loader" id="btnLoader" style="display: none;"></div>
+                    </button>
+                    <button id="clearBtn" class="btn btn-secondary">Clear</button>
+                </div>
+            </div>
+
+            <div id="resultContainer" class="result-container hidden">
+                <h3 class="result-label">Result:</h3>
+                <div id="resultOutput" class="result-output">
+                    <!-- Dynamic content filled by JS -->
+                </div>
+            </div>
+            
+        </main>
+        
+        <footer>
+            <p>Powered by Logistic Regression TF-IDF Pipeline</p>
+        </footer>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>
